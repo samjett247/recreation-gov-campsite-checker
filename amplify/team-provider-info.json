@@ -10,6 +10,27 @@
       "StackName": "amplify-campsitechecker-dev-211546",
       "StackId": "arn:aws:cloudformation:us-east-2:084686245305:stack/amplify-campsitechecker-dev-211546/bfe19ef0-2980-11ec-9cec-0aa9a9fbbf78",
       "AmplifyAppId": "d2df6whsbml24m"
+    },
+    "categories": {
+      "function": {
+        "populatecampsitescampgrounds": {
+          "deploymentBucketName": "amplify-campsitechecker-dev-211546-deployment",
+          "s3Key": "amplify-builds/populatecampsitescampgrounds-3878566c51324e723234-build.zip"
+        }
+      }
+    }
+  },
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-campsitechecker-prod-230743-authRole",
+      "UnauthRoleArn": "arn:aws:iam::084686245305:role/amplify-campsitechecker-prod-230743-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::084686245305:role/amplify-campsitechecker-prod-230743-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-campsitechecker-prod-230743-deployment",
+      "UnauthRoleName": "amplify-campsitechecker-prod-230743-unauthRole",
+      "StackName": "amplify-campsitechecker-prod-230743",
+      "StackId": "arn:aws:cloudformation:us-east-2:084686245305:stack/amplify-campsitechecker-prod-230743/62a4a6f0-2990-11ec-85d6-06ee85b05ff8",
+      "AmplifyAppId": "d2df6whsbml24m"
     }
   }
 }

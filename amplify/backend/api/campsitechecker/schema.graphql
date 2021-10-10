@@ -1,0 +1,37 @@
+# Campsite Checker Data Model
+type Alert @model @key(fields: ["id"]) {
+  id: ID!             # Alert ID
+  name: String!            # Alert name
+  description: String!     # The alert description
+  searchdates: [AWSDate!]!
+  creator: AWSEmail!
+  email_recipients: [AWSEmail!]!
+  campsites: [AlertCampsite!]! @connection(name: "AlertCampsites")
+}
+
+type AlertCampsite @model(queries:null, mutations: null, subscriptions: null) {
+    id: ID!
+    alert: Alert! @connection(name: "AlertCampsites")
+    campsite: Campsite! @connection(name: "CampsiteAlerts")
+}
+# We aren't allowing anything but get operations on this table via graphql
+type Campsite @model(queries: { get: "campsite" }, mutations: null, subscriptions: null) @key(fields: ["id"]) {
+    id: Int!
+    name: String!
+    description: String
+    alerts: [AlertCampsite!]! @connection(name: "CampsiteAlerts")
+    campground: Campground @connection(name: "CampgroundCampsites")
+}
+
+# We aren't allowing anything but get operations on this table via graphql
+type Campground @model(queries: { get: "campground" }, mutations: null, subscriptions: null) @key(fields: ["id"]){
+    id: Int!
+    name: String!
+    campsites: [Campsite!]! @connection(name: "CampgroundCampsites")
+}
+
+type LookupValue @model(queries: { get: "lookupvalue" }, mutations: null, subscriptions: null) @key(fields: ["id"]) {
+    id: ID!
+    name: String!
+    value: String!
+}
