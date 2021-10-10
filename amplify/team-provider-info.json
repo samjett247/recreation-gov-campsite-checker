@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-campsitechecker-dev-211546-authRole",
+      "UnauthRoleArn": "arn:aws:iam::084686245305:role/amplify-campsitechecker-dev-211546-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::084686245305:role/amplify-campsitechecker-dev-211546-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-campsitechecker-dev-211546-deployment",
+      "UnauthRoleName": "amplify-campsitechecker-dev-211546-unauthRole",
+      "StackName": "amplify-campsitechecker-dev-211546",
+      "StackId": "arn:aws:cloudformation:us-east-2:084686245305:stack/amplify-campsitechecker-dev-211546/bfe19ef0-2980-11ec-9cec-0aa9a9fbbf78",
+      "AmplifyAppId": "d2df6whsbml24m"
+    }
+  }
+}
